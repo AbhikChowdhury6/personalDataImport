@@ -5,7 +5,7 @@ set -e  # Exit on error
 # Source directories
 WORKING_DATA="/home/chowder/Documents/workingData"
 BULK_DATA="/home/chowder/Documents/bulkData"
-EXPORTS_DATA="/home/chowder/Documents/dataExports"
+#EXPORTS_DATA="/home/chowder/Documents/dataExports"
 
 # Destination mounts
 SSD_DEST="/media/chowder/abhiksFiles"
@@ -30,11 +30,11 @@ sync_folder() {
 # Sync all sources to SSD
 sync_folder "$WORKING_DATA" "$SSD_DEST/"
 sync_folder "$BULK_DATA" "$SSD_DEST/"
-sync_folder "$EXPORTS_DATA" "$SSD_DEST/"
+#sync_folder "$EXPORTS_DATA" "$SSD_DEST/"
 
 # Sync all sources to HDD
 sync_folder "$WORKING_DATA" "$HDD_DEST/"
 sync_folder "$BULK_DATA" "$HDD_DEST/"
-sync_folder "$EXPORTS_DATA" "$HDD_DEST/"
+#sync_folder "$EXPORTS_DATA" "$HDD_DEST/"
 
 echo "All data synced successfully."
